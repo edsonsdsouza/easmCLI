@@ -1,0 +1,16 @@
+[project]
+name = "easm"
+version = "0.1.0"
+description = "External Attack Surface Monitoring CLI"
+requires-python = ">=3.9"
+dependencies = ["dnspython", "openpyxl", "requests", "cryptography"]
+
+[project.scripts]
+easm = "easm.cli:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["easm", "easm.stages"]
